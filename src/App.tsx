@@ -1,3 +1,4 @@
+import GameGrid from "./components/GameGrid";
 import NavBar from "./components/NavBar";
 
 const App = () => {
@@ -10,7 +11,9 @@ const App = () => {
 			</header>
 			<div className="row">
 				<aside className="col-12 d-none d-md-block col-md-2 bg-info">Aside</aside>
-				<main className="col-12 col-md bg-secondary">Main</main>
+				<main className="col-12 col-md bg-secondary">
+					<GameGrid />
+				</main>
 			</div>
 		</div>
 	);
