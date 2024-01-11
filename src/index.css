@@ -13,4 +13,12 @@ html {
 body {
 	font-size: 1.6rem;
 	line-height: 1.7;
+	background-color: #fafafa;
+	color: #1f2023;
+	transition: all 0.5s;
+}
+
+.dark {
+	background-color: #1f2023;
+	color: #efefef;
 }

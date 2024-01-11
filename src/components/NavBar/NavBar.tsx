@@ -1,5 +1,6 @@
 import { ListItem, Logo, LogoContainer, LogoText, Nav } from "./NavBarStyles";
 import logo from "../../assets/react.svg";
+import Toggle from "../Toggle/Toggle";
 
 const NavBar = () => {
 	return (
@@ -8,7 +9,9 @@ const NavBar = () => {
 				<Logo src={logo} />
 				<LogoText>Logo</LogoText>
 			</LogoContainer>
-			<ListItem>Links</ListItem>
+			<ListItem>
+				<Toggle />
+			</ListItem>
 		</Nav>
 	);
 };
