@@ -10,8 +10,8 @@ const App = () => {
 				</nav>
 			</header>
 			<div className="row">
-				<aside className="col-12 d-none d-md-block col-md-2 bg-info">Aside</aside>
-				<main className="col-12 col-md bg-secondary">
+				<aside className="col-12 d-none d-md-block col-md-2">Aside</aside>
+				<main className="col-12 col-md">
 					<GameGrid />
 				</main>
 			</div>
