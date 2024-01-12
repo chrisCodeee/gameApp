@@ -10,7 +10,7 @@ const App = () => {
 					<NavBar />
 				</nav>
 			</header>
-			<div className="row">
+			<div className="row mt-5">
 				<aside className="col-12 d-none d-md-block col-md-2">
 					<GenreCard />
 				</aside>
