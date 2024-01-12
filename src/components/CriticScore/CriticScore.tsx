@@ -8,6 +8,7 @@ const Badge = styled.p`
 	padding: 0.2rem 1rem;
 	border-radius: 4px;
 	font-size: 1.4rem;
+	align-self: center;
 `;
 
 const CriticScore = ({ score }: Props) => {
