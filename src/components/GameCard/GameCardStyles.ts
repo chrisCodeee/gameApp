@@ -29,5 +29,12 @@ const CardBody = styled.div`
 	margin-top: 3rem;
 `;
 
-const CardHeading = styled.h3``;
-export { Container, CardHeading, CardBody, CardImage, CardImageContainer };
+const IconContainer = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-item: center;
+`;
+
+const CardHeading = styled.h2``;
+
+export { Container, CardHeading, CardBody, CardImage, CardImageContainer, IconContainer };
