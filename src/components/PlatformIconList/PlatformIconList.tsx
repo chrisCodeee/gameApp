@@ -20,7 +20,11 @@ const PlatformIconList = ({ game }: Props) => {
 		{ name: "iOS", icon: <FaApple /> },
 		{ name: "Web", icon: <BsGlobe /> },
 	];
-	return <div>{game.parent_platforms.map(({ platform }) => iconName.map((icon) => platform.name === icon.name && <Icon>{icon.icon}</Icon>))}</div>;
+	return (
+		<div>
+			{game.parent_platforms.map(({ platform }) => iconName.map((icon) => platform.name === icon.name && <Icon key={platform.id}>{icon.icon}</Icon>))}
+		</div>
+	);
 };
 
 export default PlatformIconList;

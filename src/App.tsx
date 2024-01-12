@@ -1,4 +1,5 @@
 import GameGrid from "./components/GameGrid";
+import GenreCard from "./components/GenreCard/GenreCard";
 import NavBar from "./components/NavBar";
 
 const App = () => {
@@ -10,7 +11,9 @@ const App = () => {
 				</nav>
 			</header>
 			<div className="row">
-				<aside className="col-12 d-none d-md-block col-md-2">Aside</aside>
+				<aside className="col-12 d-none d-md-block col-md-2">
+					<GenreCard />
+				</aside>
 				<main className="col-12 col-md">
 					<GameGrid />
 				</main>
