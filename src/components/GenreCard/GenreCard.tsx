@@ -5,9 +5,11 @@ import { Button } from "./GenreCardStyle";
 interface Props {
 	onSelectGenre: (genre: number) => void;
 	showGenre: (genre: string) => void;
+	selectedGenre: number;
+	setPageNo: (page: number) => void;
 }
 
-const GenreCard = ({ onSelectGenre, showGenre }: Props) => {
+const GenreCard = ({ onSelectGenre, showGenre, selectedGenre, setPageNo }: Props) => {
 	const { data, isLoading, error } = useGenre();
 	if (error) return null;
 	if (isLoading) return <Spinner />;
@@ -19,9 +21,11 @@ const GenreCard = ({ onSelectGenre, showGenre }: Props) => {
 					<li key={genre.id}>
 						<div className="d-flex align-item-center mb-4">
 							<Button
+								style={{ fontWeight: selectedGenre === genre.id ? "bold" : "normal" }}
 								onClick={() => {
 									onSelectGenre(genre.id);
 									showGenre(genre.name);
+									setPageNo(1);
 								}}>
 								<img
 									src={getCroppedImageUrl(genre.image_background)}
