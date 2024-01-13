@@ -4,10 +4,11 @@ import GameCard from "../GameCard";
 import { GameContainer } from "./GameGridStyles";
 interface Props {
 	pageNo: number;
+	selectedGenre: number;
 }
 
-const GameGrid = ({ pageNo }: Props) => {
-	const { data, error, isLoading } = useGames(pageNo);
+const GameGrid = ({ pageNo, selectedGenre }: Props) => {
+	const { data, error, isLoading } = useGames(pageNo, selectedGenre);
 	const loading = [1, 2, 3, 4, 5, 6];
 	return (
 		<>
