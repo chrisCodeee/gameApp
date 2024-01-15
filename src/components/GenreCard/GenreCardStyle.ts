@@ -6,10 +6,7 @@ const Button = styled.button`
 	background-color: transparent;
 	color: inherit;
 	cursor: pointer;
-
-	& span {
-		// padding-bottom: 20px;
-	}
+	padding: 0;
 
 	&:hover span {
 		border-bottom: 1px solid white;

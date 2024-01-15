@@ -9,10 +9,16 @@ interface Props {
 }
 
 const GameCard = ({ game }: Props) => {
+	try {
+	} catch {
+		alert("Error");
+	}
 	return (
 		<Container>
 			<CardImageContainer>
-				<CardImage src={getCroppedImageUrl(game.background_image)} />
+				{game.background_image ? <CardImage src={getCroppedImageUrl(game.background_image)} /> : <p className="text-danger ms-4"> No image found</p>}
+
+				{/* <CardImage src={game.background_image} /> */}
 			</CardImageContainer>
 			<CardBody className="p-4">
 				<CardHeading>{game.name}</CardHeading>

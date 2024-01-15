@@ -5,7 +5,7 @@ import { ToggleButton } from "./ToggleStyle";
 const Toggle = () => {
 	const storedMode = localStorage.getItem("mode");
 	// Use a default value of false if the storedMode is null
-	const file = storedMode ? JSON.parse(storedMode) : false;
+	const file = storedMode ? JSON.parse(storedMode) : true;
 
 	const [isDark, setIsDark] = useState(file);
 
@@ -21,12 +21,14 @@ const Toggle = () => {
 	return (
 		<>
 			{isDark ? (
-				<ToggleButton onClick={() => setIsDark(false)}>
-					Dark Mode <LiaToggleOffSolid size={30} />
+				<ToggleButton onClick={() => setIsDark(false)} className="d-flex align-items-center pt-3">
+					<LiaToggleOffSolid size={30} />
+					<span className="ms-2 d-none d-sm-inline-block">Dark Mode</span>
 				</ToggleButton>
 			) : (
 				<ToggleButton onClick={() => setIsDark(true)}>
-					Light Mode <LiaToggleOnSolid size={30} />
+					<LiaToggleOnSolid size={30} />
+					<span className="ms-2 d-none d-sm-inline-block">Light Mode</span>
 				</ToggleButton>
 			)}
 		</>
