@@ -11,7 +11,7 @@ const App = () => {
 	const [selectedGenre, setSelectedGenre] = useState(1);
 	const [genre, setGenreName] = useState<any>(null);
 	const [sortOrder, setSortOrder] = useState("");
-	const [selectedPlatform, setSelectedPlatform] = useState<any>(0);
+	const [selectedPlatform, setSelectedPlatform] = useState<any>();
 	const [selectedPlatformName, setSelectedPlatformName] = useState("");
 	const [searchValue, setSearchValue] = useState("");
 
@@ -41,22 +41,25 @@ const App = () => {
 					/>
 				</aside>
 				<main className="col-12 col-md">
-					{genre || selectedPlatformName ? (
-						<h1 className="mb-4">
-							{selectedPlatformName} {genre} Games
-						</h1>
-					) : null}
-					<div className="mb-5 d-sm-flex">
-						<GameFilter
-							selectedPlatform={selectedPlatform}
-							onSelectPlatform={(platform: number) => {
-								setSelectedPlatform(platform);
-							}}
-							onSelectPlatformName={(platform: string) => {
-								setSelectedPlatformName(platform);
-							}}
-						/>
-						<SortSelector onSortOrder={(order: string) => setSortOrder(order)} sortOrder={sortOrder} />
+					<h1 className="mb-4 text-center text-sm-start heading">
+						{selectedPlatformName} {genre} Games
+					</h1>
+
+					<div className="mb-4 d-flex justify-content-center justify-content-sm-start">
+						<div className="me-2">
+							<GameFilter
+								selectedPlatform={selectedPlatform}
+								onSelectPlatform={(platform: number) => {
+									setSelectedPlatform(platform);
+								}}
+								onSelectPlatformName={(platform: string) => {
+									setSelectedPlatformName(platform);
+								}}
+							/>
+						</div>
+						<div>
+							<SortSelector onSortOrder={(order: string) => setSortOrder(order)} sortOrder={sortOrder} />
+						</div>
 					</div>
 
 					<GameGrid

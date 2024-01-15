@@ -25,14 +25,13 @@ const CardImageContainer = styled.div`
 	overflow: hidden;
 `;
 
-const CardBody = styled.div`
-	margin-top: 3rem;
-`;
+const CardBody = styled.div``;
 
 const IconContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-item: center;
+	margin-bottom: 2px;
 `;
 
 const CardHeading = styled.h2``;

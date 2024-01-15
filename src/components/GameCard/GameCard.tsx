@@ -21,11 +21,11 @@ const GameCard = ({ game }: Props) => {
 				{/* <CardImage src={game.background_image} /> */}
 			</CardImageContainer>
 			<CardBody className="p-4">
-				<CardHeading>{game.name}</CardHeading>
 				<IconContainer>
 					<PlatformIconList game={game} />
 					<CriticScore score={game.metacritic} />
 				</IconContainer>
+				<CardHeading>{game.name}</CardHeading>
 			</CardBody>
 		</Container>
 	);

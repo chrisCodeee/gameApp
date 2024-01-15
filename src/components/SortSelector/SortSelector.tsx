@@ -16,8 +16,9 @@ const SortSelector = ({ onSortOrder, sortOrder }: Props) => {
 	return (
 		<>
 			<select
+				className="p-2"
 				name="select"
-				style={{ color: "#efefef", backgroundColor: "rgb(32, 32, 32)", borderRadius: "5px", marginRight: "10px" }}
+				style={{ color: "#efefef", backgroundColor: "rgb(32, 32, 32)", borderRadius: "5px" }}
 				onChange={(e) => onSortOrder(e.target.value)}>
 				{/* <option value='' selected>{`Sort order by: ${orderValue?.label}`}</option> */}
 				{sortOrders.map((order) => (
@@ -26,7 +27,7 @@ const SortSelector = ({ onSortOrder, sortOrder }: Props) => {
 					</option>
 				))}
 			</select>
-			<p>{`Order by: ${orderValue?.label}`}</p>
+			<p className="d-none ms-3 d-md-inline-block">{`Order by: ${orderValue?.label}`}</p>
 		</>
 	);
 };

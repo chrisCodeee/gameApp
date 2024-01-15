@@ -10,14 +10,14 @@ const GameFilter = ({ onSelectPlatform, onSelectPlatformName, selectedPlatform }
 	if (error) return null;
 
 	const platformName = data.find((name) => name.id === selectedPlatform);
-	console.log(platformName);
+	// console.log(platformName);
 
 	return (
 		<>
 			<select
 				name="filter"
-				className="me-4 d-block mb-5 mb-sm-0 p-2"
-				style={{ color: "#efefef", backgroundColor: "rgb(32, 32, 32)", borderRadius: "5px" }}
+				className="p-2"
+				style={{ color: "#efefef", backgroundColor: "rgb(32, 32, 32)", borderRadius: "5px", width: "100%" }}
 				onChange={(e) => {
 					onSelectPlatform(parseInt(e.target.value));
 					onSelectPlatformName(platformName?.name);

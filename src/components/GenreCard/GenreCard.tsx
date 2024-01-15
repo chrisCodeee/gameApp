@@ -16,6 +16,7 @@ const GenreCard = ({ onSelectGenre, showGenre, selectedGenre, setPageNo }: Props
 
 	return (
 		<>
+			<h1 className="mb-4 genreHeading">Genres</h1>
 			<ul className="p-0">
 				{data.map((genre) => (
 					<li key={genre.id}>
